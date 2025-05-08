@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <nav id="top-bar">
+      <i class="fa-solid fa-list list"></i>
+      <h3>Now Playing</h3>
+      <i class="fa-regular fa-heart love"></i>
+      <!-- <i class="fa-solid fa-heart"></i> -->
+    </nav>
+    <div id="song-info">
+      <img src="/songs/images/perfect.png" alt="" width="200px" />
+      <h4 class="song-name">perfect</h4>
+      <h5 class="artist-name">ed shreen</h5>
+    </div>
+
+    <audio
+      src="/songs/sound/perfect.mp3"
+      controls
+      style="display: none"
+      onended="updateSong();"
+    ></audio>
+    <div class="controls">
+      <div class="controls-1">
+        <input type="range" class="timeline" value="0" />
+      </div>
+      <div class="controls-2">
+        <i class="fa-solid fa-shuffle" id="shuffle"></i>
+        <button class="btn control" id="prev">
+          <i class="fa-solid fa-backward-step"></i>
+        </button>
+        <button class="btn control" id="play-pause">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button class="btn control" id="next">
+          <i class="fa-solid fa-forward-step"></i>
+        </button>
+        <i class="fa-solid fa-repeat" id="loop"></i>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
