@@ -10,6 +10,8 @@
 
 body {
   background-color: #070707;
+  text-align: center;
+  overflow: hidden;
 }
 
 h3 {
@@ -71,6 +73,19 @@ i,
   color: rgba(255, 255, 255, 0.466);
 }
 
+#error {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  width: 90%;
+  overflow: hidden;
+  border-radius: 30px;
+  position: absolute;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  margin: 20px 10px;
+}
+
 .control {
   width: 35px;
   height: 35px;
@@ -129,4 +144,41 @@ i {
   margin: 20px auto;
   range: auto;
   accent-color: #c2d866;
+}
+
+#song-lists {
+  width: 290px;
+  height: 100vh;
+  background-color: #070707;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  padding: 10px;
+  overflow-y: scroll;
+  scrollbar-color: rgb(68, 68, 68) rgb(0, 0, 0);
+  scrollbar-width: thin;
+}
+
+.list-item {
+  width: 90%;
+  padding: 5px;
+  background-color: rgba(0, 162, 255, 0.13);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 12px;
+}
+
+.list-item-song-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.list-item-song-name {
+  margin: 7px;
+  color: rgba(255, 255, 255, 0.829);
+  font-size: 14px;
 }
