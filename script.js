@@ -37,6 +37,10 @@ const timeline = document.querySelector(".timeline");
 const shuffle = document.querySelector("#shuffle");
 const songName = document.querySelector(".song-name");
 const artistName = document.querySelector(".artist-name");
+const istFrame = document.querySelector("#song-lists");
+const listItem = document.querySelectorAll(".list-item");
+const listItemSongName = document.querySelectorAll(".list-item-song-name");
+const listItemSongImg = document.querySelectorAll(".list-item-song-img");
 
 let songIndex = 0;
 let play = true;
@@ -154,11 +158,6 @@ shuffle.addEventListener("click", () => {
   }
 });
 
-function getRandomValueFromArray(arr) {
-  const randomIndex = Math.floor(Math.random() * arr.length);
-  return arr[randomIndex];
-}
-
 // Like/Unlike toggle
 like.addEventListener("click", () => {
   if (liked == false) {
@@ -191,6 +190,10 @@ like.addEventListener("click", () => {
 // });
 
 songAudio.addEventListener("ended", () => {
+  if (shuffleActive == true) {
+    songIndex = Math.round(Math.random() * songs.length);
+  }
+
   if (loopActive == true) {
     return;
   } else {
